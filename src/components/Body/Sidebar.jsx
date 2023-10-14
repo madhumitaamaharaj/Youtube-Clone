@@ -5,11 +5,10 @@ import {
   MdOutlineWatchLater,
   MdOutlineLiveTv,
   MdOutlineSportsSoccer,
-  MdOutlineFeedback
+  MdOutlineFeedback,MdOutlinePodcasts
 } from "react-icons/md";
 import { GrHistory } from "react-icons/gr";
 import { BsPlayBtn } from "react-icons/bs";
-import { GoVideo } from "react-icons/go";
 import { HiTrendingUp } from "react-icons/hi";
 import {
   IoGameControllerOutline,
@@ -17,13 +16,9 @@ import {
   IoNewspaperOutline,
 } from "react-icons/io5";
 import { BiMoviePlay, BiHelpCircle } from "react-icons/bi";
-import { FaShopify, FaUser, FaCircleUser } from "react-icons/fa6";
+import { FaShopify } from "react-icons/fa6";
 import { PiStudentFill } from "react-icons/pi";
-import { FcStart,  FcManager, FcPortraitMode } from "react-icons/fc";
-import { ImYoutube2 } from "react-icons/im";
-import { SiYoutubemusic } from "react-icons/si";
 import { VscReport } from "react-icons/vsc";
-import { CiYoutube } from "react-icons/ci";
 import {
   AiOutlineHome,
   AiOutlineLike,
@@ -58,18 +53,32 @@ const Sidebar = () => {
       <h1 className='ml-3'>Explore</h1>
       <ul className='mb-5'>
       <li className="flex items-center mt-2 ml-3"> <HiTrendingUp className="text-xl" /><span className="ml-7">Trending</span></li>
-      <li className="flex items-center mt-2 ml-3"> <MdOutlineSubscriptions className="text-xl" /><span className="ml-7">Shopping</span></li>
-      <li className="flex items-center mt-2 ml-3"> <MdOutlineSubscriptions className="text-xl" /><span className="ml-7">Music</span></li>
-      <li className="flex items-center mt-2 ml-3"> <MdOutlineSubscriptions className="text-xl" /><span className="ml-7">Movies</span></li>
-      <li className="flex items-center mt-2 ml-3"> <MdOutlineSubscriptions className="text-xl" /><span className="ml-7">  Live</span></li>
+      <li className="flex items-center mt-2 ml-3">   <AiOutlineShopping className="text-xl" /><span className="ml-7">Shopping</span></li>
+      <li className="flex items-center mt-2 ml-3">  <IoMusicalNotesOutline className="text-xl" /><span className="ml-7">Music</span></li>
+      <li className="flex items-center mt-2 ml-3">  <BiMoviePlay className="text-xl" /><span className="ml-7">Movies</span></li>
+      <li className="flex items-center mt-2 ml-3">  <MdOutlineLiveTv className="text-xl" /><span className="ml-7">  Live</span></li>
       <li className="flex items-center mt-2 ml-3"> <IoGameControllerOutline className="text-xl" /><span className="ml-7">Gaming</span></li>
-      <li className="flex items-center mt-2 ml-3"> <MdOutlineSubscriptions className="text-xl" /><span className="ml-7">News</span></li>
-      <li className="flex items-center mt-2 ml-3"> <MdOutlineSubscriptions className="text-xl" /><span className="ml-7">Sports</span></li>
-      <li className="flex items-center mt-2 ml-3"> <MdOutlineSubscriptions className="text-xl" /><span className="ml-7">Learning</span></li>
-      <li className="flex items-center mt-2 ml-3"> <MdOutlineSubscriptions className="text-xl" /><span className="ml-7">Fashion & Beauty</span></li>
-      <li className="flex items-center mt-2 ml-3"> <MdOutlineSubscriptions className="text-xl" /><span className="ml-7">Podcasts</span></li>
+      <li className="flex items-center mt-2 ml-3">  <IoNewspaperOutline className="text-xl" /><span className="ml-7">News</span></li>
+      <li className="flex items-center mt-2 ml-3">  <MdOutlineSportsSoccer className="text-xl" /><span className="ml-7">Sports</span></li>
+      <li className="flex items-center mt-2 ml-3">   <PiStudentFill className="text-xl" /><span className="ml-7">Learning</span></li>
+      <li className="flex items-center mt-2 ml-3">  <FaShopify className="text-xl" /><span className="ml-7">Fashion & Beauty</span></li>
+      <li className="flex items-center mt-2 ml-3"> <MdOutlinePodcasts className="text-xl" /><span className="ml-7">Podcasts</span></li>
 
       </ul>
+      <h1 className='ml-3'>More from YouTube</h1>
+      <ul className='mb-5'>
+      <li className="flex items-center mt-2"> <img className='h-8 rounded-full ml-3' src='https://img.freepik.com/premium-vector/red-youtube-logo-social-media-logo_197792-1803.jpg' alt='youtube-premium' /> <span className="ml-3">YouTube Premium</span></li>
+      <li className="flex items-center mt-2"> <img className='h-8 rounded-full ml-3' src='https://static.vecteezy.com/system/resources/previews/017/396/826/original/youtube-studio-icons-free-png.png' alt='youtube-premium' /> <span className="ml-3">YouTube Studio</span></li>
+      <li className="flex items-center mt-2"> <img className='h-8 rounded-full ml-3' src='https://static.vecteezy.com/system/resources/previews/017/395/384/original/youtube-music-icon-free-png.png' alt='youtube-premium' /> <span className="ml-3">YouTube Music</span></li>
+      <li className="flex items-center mt-2"> <img className='h-8 rounded-full ml-3' src='https://i.pinimg.com/originals/41/e8/20/41e82046cd52130a111049ea560cfbda.png' alt='youtube-premium' /> <span className="ml-3">YouTube Kids</span></li>
+
+      </ul>
+      <ul className='mb-5'>
+      <li className="flex items-center mt-2 ml-3 ">  <AiOutlineSetting className="text-xl" /> <span className="ml-7">Settings </span></li>
+      <li className="flex items-center mt-2 ml-3"> <VscReport className="text-xl" /><span className="ml-7"> Report History</span></li>
+      <li className="flex items-center mt-2 ml-3"> <BiHelpCircle className="text-xl" /><span className="ml-7">Help</span></li>
+      <li className="flex items-center mt-2 ml-3"> <MdOutlineFeedback className="text-xl" /><span className="ml-7">Send Feedback</span></li>
+    </ul>
     </div>
   )
 }
