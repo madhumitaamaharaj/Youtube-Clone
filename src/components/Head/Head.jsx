@@ -1,13 +1,22 @@
 import React from 'react'
 import { BsBell } from 'react-icons/bs';
 import { BiVideoPlus } from 'react-icons/bi';
+import { useDispatch } from 'react-redux';
+import {toggleMenu} from '../../utils/appSlice';
 
 const Head = () => {
+const dispatch=useDispatch();
+
+  const toggleMenuHandler=()=>{
+dispatch(toggleMenu());
+  }
   return (
     <div className='grid grid-flow-col p-2 m-2 shadow-lg'>
       <div className='flex col-span-1 '>
-      <img  className='h-8'src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRluArKhcKNYcRBrTznCWC6LLhtMjtTYePMow&usqp=CAU' alt='hamburger-menu'/>
+      <img  onClick={()=>toggleMenuHandler()} className='h-8 cursor-pointer'src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRluArKhcKNYcRBrTznCWC6LLhtMjtTYePMow&usqp=CAU' alt='hamburger-menu'/>
+      <a href='/'>
       <img  className='h-8 mx-2' src='https://w7.pngwing.com/pngs/674/324/png-transparent-youtube-logo-music-video-computer-icons-youtube-logo-text-trademark-logo.png' alt='youtube-logo'/>
+      </a>
       </div>
 <div className='col-span-10 px-10 flex items-center'>
 <input className='w-1/2 border border-gray-400 p-2 rounded-l-full'type='text' placeholder='Search'/>
